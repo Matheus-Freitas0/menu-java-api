@@ -1,1 +1,3 @@
 com/example/menu_java_api/MenuJavaApiApplication.class
+com/example/menu_java_api/food/Food.class
+com/example/menu_java_api/controller/FoodController.class
