@@ -1,12 +1,19 @@
 package com.example.menu_java_api.food;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "foods")
 @Table(name = "foods")
+
 public class Food {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
-    private String name;
+
+    private String title;
+
+    private String image;
+
+    private Integer price;
 
 }
