@@ -1,13 +1,13 @@
-package com.example.menu_java_api;
+package com.matheus.training_spring_boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MenuJavaApiApplication {
+public class TrainingSpringBootApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MenuJavaApiApplication.class, args);
+		SpringApplication.run(TrainingSpringBootApplication.class, args);
 	}
 
 }
