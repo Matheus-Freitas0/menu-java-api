@@ -23,7 +23,7 @@ public class HelloWorldController {
 
     @PostMapping("")
     public String helloWorldPost(@RequestBody User body){
-        return "Hello World" + body.getName();
+        return "Hello World " + body.getName();
     }
 
 
