@@ -1,5 +1,6 @@
 package com.matheus.training_spring_boot.controller;
 
+import com.matheus.training_spring_boot.domain.User;
 import com.matheus.training_spring_boot.service.HelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +22,8 @@ public class HelloWorldController {
     }
 
     @PostMapping("")
-    public String helloWorldPost(@RequestBody String body){
-        return "Hello World Post";
+    public String helloWorldPost(@RequestBody User body){
+        return "Hello World" + body.getName();
     }
 
 
