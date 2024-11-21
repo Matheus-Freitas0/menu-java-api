@@ -2,9 +2,7 @@ package com.matheus.training_spring_boot.controller;
 
 import com.matheus.training_spring_boot.service.HelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("hello-world")
@@ -21,5 +19,11 @@ public class HelloWorldController {
     public String helloWorld(){
         return helloWorldService.helloWorld("Matheus");
     }
+
+    @PostMapping("")
+    public String helloWorldPost(@RequestBody String body){
+        return "Hello World Post";
+    }
+
 
 }
