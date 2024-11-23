@@ -26,5 +26,15 @@ public class HelloWorldController {
         return "Hello World " + body.getName() + id + filter;
     }
 
+    @PutMapping("/{id}")
+    public String helloWorldPut(@PathVariable("id") String id){
+      return "Hello World" + id;
+    }
+
+    @DeleteMapping("/{id}")
+    public String helloWorldDelete(@PathVariable("id") String id){
+        return "Hello World Delete" + id;
+    }
+
 
 }
