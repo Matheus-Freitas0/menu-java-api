@@ -30,7 +30,13 @@ public class HelloWorldController {
     public String helloWorldPut(@PathVariable("id") String id){
       return "Hello World" + id;
     }
-
+    
+    @PatchMapping("{id}")
+    public String helloWorldPatch(@PathVariable("id") String id){
+        String s = "Hello World Patch" + id;
+        return s;
+    }
+    
     @DeleteMapping("/{id}")
     public String helloWorldDelete(@PathVariable("id") String id){
         return "Hello World Delete" + id;
