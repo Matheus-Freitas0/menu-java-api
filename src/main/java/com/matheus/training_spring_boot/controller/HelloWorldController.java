@@ -33,8 +33,7 @@ public class HelloWorldController {
     
     @PatchMapping("{id}")
     public String helloWorldPatch(@PathVariable("id") String id){
-        String s = "Hello World Patch" + id;
-        return s;
+        return "Hello World Patch" + id;
     }
     
     @DeleteMapping("/{id}")
