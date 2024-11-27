@@ -15,8 +15,11 @@ public class User {
     private Long id;
 
     @Column(nullable = false)
+    @Size(min = 2, max = 100, message = "O nome deve ter entre 2 e 100 caracteres")
     private String name;
 
     @Column(nullable = false, unique = true)
+    @Email(message = "Email deve ser valido")
+    @NotNull(message = "Email não pode ser nulo")
     private String email;
 }
