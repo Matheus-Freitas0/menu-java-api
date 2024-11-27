@@ -1,7 +1,9 @@
 package com.matheus.training_spring_boot.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import lombok.Data;
+
 
 @Data
 @Entity
