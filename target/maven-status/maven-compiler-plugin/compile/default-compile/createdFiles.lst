@@ -1,0 +1,5 @@
+com/matheus/training_spring_boot/domain/User.class
+com/matheus/training_spring_boot/controller/HelloWorldController.class
+com/matheus/training_spring_boot/configuration/HelloConfiguration.class
+com/matheus/training_spring_boot/service/HelloWorldService.class
+com/matheus/training_spring_boot/TrainingSpringBootApplication.class
