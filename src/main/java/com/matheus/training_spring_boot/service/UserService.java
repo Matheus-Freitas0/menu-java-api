@@ -1,18 +1,18 @@
 package com.matheus.training_spring_boot.service;
 
-
 import com.matheus.training_spring_boot.domain.User;
 import com.matheus.training_spring_boot.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
+
 public class UserService {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public List<User> getAllUsers() {
         return userRepository.findAll();
