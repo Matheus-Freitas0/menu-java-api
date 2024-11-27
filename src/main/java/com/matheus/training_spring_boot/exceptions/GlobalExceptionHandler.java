@@ -13,19 +13,26 @@ import java.util.Map;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    public ResponseEntity<Map<String, String>> handleValidationsExceptions(MethodArgumentNotValidException ex){
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<Map<String, String>> handleValidationExceptions(MethodArgumentNotValidException ex) {
         Map<String, String> errors = new HashMap<>();
         ex.getBindingResult().getFieldErrors().forEach(error -> {
             errors.put(error.getField(), error.getDefaultMessage());
         });
-        return ResponseEntity.badRequest().body(errors);
+
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Dados inválidos");
+        response.put("details", errors.toString());
+
+        return ResponseEntity.badRequest().body(response);
     }
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<String> handleRuntimeException(RuntimeException ex, WebRequest request) {
+    public ResponseEntity<Map<String, String>> handleGenericException(Exception ex, WebRequest request) {
         Map<String, String> response = new HashMap<>();
-        response.put("error", "Ocorreu um erro inesperado");
-        response.put("message", ex.getMessage());
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Ocorreu um erro" + response);
+        response.put("message", "Ocorreu um erro inesperado");
+        response.put("details", ex.getMessage());
+
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
     }
 }
