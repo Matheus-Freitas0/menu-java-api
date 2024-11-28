@@ -1,5 +1,7 @@
 /home/matheus/Documents/workspace_projects/training-spring-boot/src/main/java/com/matheus/training_spring_boot/TrainingSpringBootApplication.java
 /home/matheus/Documents/workspace_projects/training-spring-boot/src/main/java/com/matheus/training_spring_boot/config/SecurityConfig.java
+/home/matheus/Documents/workspace_projects/training-spring-boot/src/main/java/com/matheus/training_spring_boot/config/SwaggerConfig.java
+/home/matheus/Documents/workspace_projects/training-spring-boot/src/main/java/com/matheus/training_spring_boot/config/UserDetailsServiceConfig.java
 /home/matheus/Documents/workspace_projects/training-spring-boot/src/main/java/com/matheus/training_spring_boot/controller/UserController.java
 /home/matheus/Documents/workspace_projects/training-spring-boot/src/main/java/com/matheus/training_spring_boot/domain/User.java
 /home/matheus/Documents/workspace_projects/training-spring-boot/src/main/java/com/matheus/training_spring_boot/exceptions/GlobalExceptionHandler.java
