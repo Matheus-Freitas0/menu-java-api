@@ -1,6 +1,0 @@
-com/matheus/training_spring_boot/exceptions/GlobalExceptionHandler.class
-com/matheus/training_spring_boot/TrainingSpringBootApplication.class
-com/matheus/training_spring_boot/domain/User.class
-com/matheus/training_spring_boot/service/UserService.class
-com/matheus/training_spring_boot/controller/UserController.class
-com/matheus/training_spring_boot/repository/UserRepository.class
